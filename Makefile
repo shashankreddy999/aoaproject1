@@ -11,3 +11,6 @@ run3:
 
 run4:
 	python3 AOAstrat4.py
+
+run5:
+	python3 AOAbonus.py
