@@ -7,10 +7,10 @@ class House:
         self.painted = False
         self.idx = idx
         
-    def __lt__(self, other):
+    def __lt__(self, other): #less than override
         return self.enddate <= other.enddate
 
-def strat5(n, m, houses):
+def strat5(n, m, houses): #implementing strat 5
     li = [House(h[0], h[1], i) for i, h in enumerate(houses)]
     Q = PriorityQueue()
     res = []
@@ -42,7 +42,7 @@ def strat5(n, m, houses):
 
 n,m=list(map(lambda x: int(x),input().split()))
 house_list=[]
-for i in range(m):
+for i in range(m): #taking input
     start,end=list(map(lambda x: int(x),input().split()))
     h=(start,end)
     house_list.append(h)

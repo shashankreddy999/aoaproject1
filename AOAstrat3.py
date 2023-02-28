@@ -7,13 +7,13 @@ class House:
         self.duration = enddate - startdate
         self.painted = False
 
-    def __lt__(self, other):
+    def __lt__(self, other): #overriding less than method 
         return self.duration < other.duration
 
 
-def strat3(n, houses):
+def strat3(n, houses): #implementing strat 3
     li = [House(h[0], h[1]) for h in houses]
-    Q = PriorityQueue()
+    Q = PriorityQueue() #creating a priority q
     res = []
     
     for c in range(1, n+1):
@@ -39,7 +39,7 @@ def strat3(n, houses):
     return res
 n,m=list(map(lambda x: int(x),input().split()))
 house_list=[]
-for i in range(m):
+for i in range(m): #taking input
     start,end=list(map(lambda x: int(x),input().split()))
     h=(start,end)
     house_list.append(h)

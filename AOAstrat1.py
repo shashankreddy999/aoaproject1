@@ -4,10 +4,10 @@ class House:
     self.enddate=enddate
     self.painted=False
 
-def strat1(n,house_list):
+def strat1(n,house_list): #strat1 implementation
   m=0
-  res={}
-  li=[]
+  res={} # res is resultant dict with day and house just to check
+  li=[] #li is resultant list
   c=1
   while c<=n and m<len(house_list):
     #print(c)
@@ -28,7 +28,7 @@ def strat1(n,house_list):
 
 n,m=list(map(lambda x: int(x),input().split()))
 house_list=[]
-for i in range(m):
+for i in range(m): #taking input
     start,end=list(map(lambda x: int(x),input().split()))
     h=House(start,end)
     house_list.append(h)
